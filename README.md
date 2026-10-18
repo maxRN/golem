@@ -160,4 +160,3 @@ Nebius VM running.
 
 More WebRTC troubleshooting is in `docs/webrtc-stream.md` in the simulation checkout.
 
-VM Git push verification completed on 18 October 2026.

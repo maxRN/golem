@@ -1,0 +1,67 @@
+{
+  "model": "nvidia/Cosmos-Transfer2.5-2B",
+  "model_variant": "edge/distilled",
+  "source_video": "/home/ubuntu/work/so101_sim_pickplace/logs/grid_verified/grid_demo.mp4",
+  "source_sha256": "7f7f9d1cc83b170765850d3880d47cb223e496fc5cb15cf118f9b2839ede92ed",
+  "source_start_seconds": 5.2,
+  "crop_xywh": [
+    0,
+    96,
+    640,
+    480
+  ],
+  "input_fps": 16,
+  "input_frames": 93,
+  "variants": [
+    "warm_diffuse",
+    "cool_diffuse",
+    "soft_side_light"
+  ],
+  "status": "completed",
+  "note": "Short visual augmentation samples. Source camera crop only, with frame resampling. No action dataset has been relabeled or mixed with these clips.",
+  "source_code_commit": "2ff49d0717af02057ae79bc75c00fbff9da1b4e7",
+  "transfer_checkpoint_revision": "bbaeedb2b57cc8b14a44653099e2551adb69dcc7",
+  "seed": 2026,
+  "diffusion_steps": 4,
+  "edge_control_weight": 1.0,
+  "guardrails_enabled": true,
+  "vm_process_id": 74605,
+  "vm_log": "/home/ubuntu/cosmos-lighting.log",
+  "purpose": "User-requested demonstration that Cosmos Transfer 2.5 inference works on simulation video",
+  "outputs": [
+    {
+      "name": "warm_diffuse",
+      "file": "outputs/warm_diffuse.mp4",
+      "bytes": 5761390,
+      "sha256": "83b88e1f7589ff77440c5bfdfa12b57081593032650e6975e20c4e9eda45dcdd",
+      "frames": 93,
+      "fps": 16,
+      "width": 640,
+      "height": 480,
+      "duration_seconds": 5.8125
+    },
+    {
+      "name": "cool_diffuse",
+      "file": "outputs/cool_diffuse.mp4",
+      "bytes": 5741316,
+      "sha256": "c88febd6ca8accb33728432ee434a365027cfec3f2706bf02823e9978c65f0b9",
+      "frames": 93,
+      "fps": 16,
+      "width": 640,
+      "height": 480,
+      "duration_seconds": 5.8125
+    },
+    {
+      "name": "soft_side_light",
+      "file": "outputs/soft_side_light.mp4",
+      "bytes": 5757709,
+      "sha256": "92573912ab7331399a2ce3b88a62ce298eabe8f5ff92e9233106ea2ec09ec5d1",
+      "frames": 93,
+      "fps": 16,
+      "width": 640,
+      "height": 480,
+      "duration_seconds": 5.8125
+    }
+  ],
+  "review_notes": "These generated visual samples also change some textures and grid colors. The user accepted the original variants as an inference demonstration. No training dataset was modified."
+}
